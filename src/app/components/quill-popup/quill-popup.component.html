@@ -1,0 +1,29 @@
+<p>quill-popup works!</p>
+
+<button (click)="openPopup()" class="bg-blue-500 text-white px-4 py-2 rounded">
+  Open Popup
+</button>
+
+<div
+  *ngIf="isPopupOpen"
+  class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-full"
+>
+  <div class="bg-white p-6 rounded shadow-lg relative w-[50%] h-[50%]">
+    <button
+      (click)="closePopup()"
+      class="absolute top-2 right-2 text-gray-600 hover:text-black"
+    >
+      &times;
+    </button>
+    <h2 class="text-lg font-bold mb-4">Popup Title</h2>
+    <p>Your popup content goes here.</p>
+    <!-- Inside the popup -->
+    <div #popupEditorContainer class="editor-container"></div>
+    <button
+      (click)="closePopup()"
+      class="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+    >
+      Close
+    </button>
+  </div>
+</div>

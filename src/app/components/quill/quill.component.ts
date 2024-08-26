@@ -1,12 +1,15 @@
 //app.component.ts
 
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import { RouterModule, RouterOutlet } from "@angular/router";
 import Quill from "quill";
+
+
 
 @Component({
   selector: 'app-quill',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './quill.component.html',
   styleUrl: './quill.component.css'
 })

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { MultiSelectComponent } from './components/multi-select/multi-select.component';
 import { SelectComponent } from './components/select/select.component';
 import { HighchartsComponent } from './components/highcharts/highcharts.component';
@@ -24,6 +24,7 @@ import { QuillComponent } from './components/quill/quill.component';
     TextEditorComponent,
     TexteditorQuillComponent,
     QuillComponent,
+    RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

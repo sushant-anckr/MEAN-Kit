@@ -1,0 +1,10 @@
+.editor-container {
+    height: 200px; /* Adjust the height as needed */
+    max-height: 200px; /* Ensure the height doesn't exceed the set value */
+    overflow-y: auto; /* Add scroll if content exceeds the height */
+  }
+  
+  .ql-editor {
+    height: 100%; /* Make the editor fill the container */
+    max-height: 100%; /* Ensure the editor height is controlled by the container */
+  }
