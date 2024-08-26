@@ -25,15 +25,17 @@ export class QuillComponent implements OnInit {
       try {
           this.editor = new Quill(this.editorContainer.nativeElement, {
               modules: {
-                  toolbar: [
-                      [{ header: [1, 2, false] }],
-                      ["bold", "italic", "underline", "strike","blockquote","code-block"],
-                      [{ list: "ordered" }, { list: "bullet" }],
-                      ["link", "image", "video"],
-                      [{ align: [] }],
-                      [{ color: [] }, { background: [] }],
-                      ["clean"],
-                  ],
+                  toolbar: {
+                    container:[
+                        [{ header: [1, 2, false] }],
+                        ["bold", "italic", "underline", "strike","blockquote","code-block"],
+                        [{ list: "ordered" }, { list: "bullet" }],
+                        ["link", "image", "video"],
+                        [{ align: [] }],
+                        [{ color: [] }, { background: [] }],
+                        ["clean"],
+                    ],
+                  }
               },
               theme: "snow",
           });
