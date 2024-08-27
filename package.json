@@ -24,6 +24,7 @@
     "@ckeditor/ckeditor5-build-decoupled-document": "^43.0.0",
     "@ckeditor/ckeditor5-watchdog": "^43.0.0",
     "@dimpu/ngx-quill": "^7.0.10",
+    "@kolkov/angular-editor": "^3.0.0-beta.0",
     "@ng-select/ng-select": "^13.7.0",
     "@types/quill": "^2.0.14",
     "d3": "^7.9.0",

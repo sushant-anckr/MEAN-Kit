@@ -9,6 +9,7 @@ import { TextEditorComponent } from './components/text-editor/text-editor.compon
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { TexteditorQuillComponent } from './components/texteditor-quill/texteditor-quill.component';
 import { QuillComponent } from './components/quill/quill.component';
+import { KolkovEditorComponent } from "./components/kolkov-editor/kolkov-editor.component";
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ import { QuillComponent } from './components/quill/quill.component';
     TextEditorComponent,
     TexteditorQuillComponent,
     QuillComponent,
-  ],
+    KolkovEditorComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
