@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule, NgLabelTemplateDirective, NgOptionTemplateDirective } from '@ng-select/ng-select';
-import { DataService, Person } from '../../services/data.service';
 import { map } from 'rxjs';
+import { DataService, Person } from '../../../services/data.service';
 
 @Component({
   selector: 'app-multi-select',

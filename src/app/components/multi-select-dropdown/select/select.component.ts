@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { map } from 'rxjs/operators';
-import { DataService } from '../../services/data.service';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { DataService } from '../../../services/data.service';
 
 
 

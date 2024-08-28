@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   import Quill from 'quill';
-import { HelloComponent } from '../text-editor/hello.component';
 import { FormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill'
 import hljs from 'highlight.js'
+import { HelloComponent } from '../text-editor/hello.component';
 
 @Component({
   selector: 'app-texteditor-quill',

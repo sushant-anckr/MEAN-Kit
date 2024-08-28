@@ -1,0 +1,5 @@
+<p>date-picker works!</p>
+
+<!-- date-picker.component.html -->
+<dp-date-picker [(ngModel)]="selectedDate" mode="day" theme="dp-material" (ngModelChange)="onDateChange()"></dp-date-picker>
+<p>Selected Date: {{ formattedDate }}</p>
