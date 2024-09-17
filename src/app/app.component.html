@@ -16,31 +16,8 @@
 
   <!-- <app-date-picker /> -->
 
-  <div>
-    <h3>Change DateTime Format in Run Time</h3>
-  
-    <!-- <mat-form-field class="input-elment">
-      <mat-select placeholder="Select format" [(ngModel)]="selectedFormat" (selectionChange)="onSelectionChange_Format($event)">
-        <mat-option *ngFor="let format of formatList" [value]="format">
-          {{ format }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-   -->
-   <select 
-   class="form-control input-element" 
-   [(ngModel)]="selectedFormat" 
-   (change)="onSelectionChange_Format($event)" 
-   name="formatSelector">
-   <option *ngFor="let format of formatList" [value]="format">
-     {{ format }}
-   </option>
- </select>
-    <br>
-    <br> 
 
-    <app-matreial-dates></app-matreial-dates>
-  </div>
+<!-- <app-toaster /> -->
 
-
-  <!-- <app-popup-date-picker /> -->
+<app-ngx-sooner />
+<app-tooltipchart />

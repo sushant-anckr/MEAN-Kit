@@ -20,7 +20,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-
+import { ToasterComponent } from "./components/toaster/toaster.component";
+import { toast, NgxSonnerToaster } from 'ngx-sonner';
+import { NgxSoonerComponent } from "./components/ngx-sooner/ngx-sooner.component";
+import { TooltipchartComponent } from "./components/charts/tooltipchart/tooltipchart.component";
 
 @Component({
   selector: 'app-root',
@@ -46,36 +49,52 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     CommonModule,
     MatFormFieldModule,
     MatOptionModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    ToasterComponent,
+    NgxSonnerToaster,
+    NgxSoonerComponent,
+    TooltipchartComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'trykit';
+  protected readonly toast = toast;
 
-  public selectedFormat!: string;
-  public formatList =
-  [
-    'DD-MM-YYYY',
-    'DD/MM/YY',
-    'L',
-    'LL',
+  groupData = [
+    {
+      key: new Date(2019, 1, 7),
+      values: [
+        { grpName: 'GBP', grpValue: 1600 },
+        { grpName: 'EUR', grpValue: 1520 },
+        { grpName: 'USD', grpValue: 480 },
+      ],
+    },
+    {
+      key: new Date(2019, 1, 14),
+      values: [
+        { grpName: 'GBP', grpValue: 1460 },
+        { grpName: 'EUR', grpValue: 2300 },
+        { grpName: 'USD', grpValue: 580 },
+      ],
+    },
+    {
+      key: new Date(2019, 1, 21),
+      values: [
+        { grpName: 'GBP', grpValue: 320 },
+        { grpName: 'EUR', grpValue: 900 },
+        { grpName: 'USD', grpValue: 1500 },
+      ],
+    },
+    {
+      key: new Date(2019, 1, 28),
+      values: [
+        { grpName: 'GBP', grpValue: 410 },
+        { grpName: 'EUR', grpValue: 1550 },
+        { grpName: 'USD', grpValue: 600 },
+      ],
+    },
   ];
 
-  public constructor(
-    private _dateTimeService: DateTimeService)
-  {
-    console.log("App.component - ctor");
-  }
-
-  public ngOnInit(): void
-  {
-    this.selectedFormat = this._dateTimeService.format;
-  }
-
-  public onSelectionChange_Format(event:any): void
-  {
-    this._dateTimeService.format = this.selectedFormat;
-  }
 }

@@ -31,7 +31,7 @@ export class D3chartsAgComponent implements OnInit {
   }
 
   
-  private createChart(): void {
+  createChart(): void {
     const data = this.categories.map((category, i) => ({
       category,
       Remaining: this.totalRemaining[i] || 0,
@@ -46,7 +46,7 @@ export class D3chartsAgComponent implements OnInit {
     const width = element.offsetWidth - margin.left - margin.right;
     const height = element.offsetHeight - margin.top - margin.bottom;
 
-        d3.select(element).select('svg').remove();
+    d3.select(element).select('svg').remove();
 
     const svg = d3.select(element)
     .append('svg')
@@ -112,39 +112,8 @@ export class D3chartsAgComponent implements OnInit {
     .attr('y', (d: any) => y(d[1]))
     .attr('height', (d: any) => y(d[0]) - y(d[1]));
 
-      // .on('mouseover', function(event, d: any) {
-
-      //   console.log("mouseover event triggered");
-      //   console.log("Data:", d);
-      //   console.log("Event:", event);
-      //   const category = d.data.category;
-      //   const total = d3.sum(seriesNames, key => d.data[key]);
-
-      //   // Aggregate data for the hovered category
-      //   const values = seriesNames.map(key => {
-      //     const value = d.data[key];
-      //     const percentage = (value / total * 100).toFixed(2);
-      //     return value > 0 ? `<span style="color:${color(key)}">${key}: $ ${d3.format(',.2f')(value)} (${percentage}%)</span><br/>` : '';
-      //   }).join('');
-
-      //   // Get the x and y positions of the hovered bar
-      //   // const xPos = x(d.data.category)! + x.bandwidth() / 2; // Center horizontally
-      //   // const yPos = y(d[0]);
-
-      //   // Set tooltip content and position
-      //   d3.select('#tooltip-text')
-      //     .html(`${category}:<br/>${values}`);
-
-      //   d3.select('#tooltip')
-      //     .style('left', `${event.pageX - 70}px`) // Center horizontally near the cursor
-      //     .style('top', `${event.pageY - 90}px`) // Adjust vertically to be above the bar
-      //     .classed('show', true); // Show tooltip with transition
-      // })
-      // .on('mouseout', () => d3.select('#tooltip').classed('show', false));
-
-       // Add data labels
     
-       bars.selectAll('text')
+    bars.selectAll('text')
     .data(d => d)
     .enter().append('text')
     .attr('x', (d: any) => x(d.data.category)! + x.bandwidth() / 2) // Center text horizontally
